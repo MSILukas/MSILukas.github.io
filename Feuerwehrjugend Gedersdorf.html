@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Feuerwehrjugend Gedersdorf</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      background-color: #fafafa;
+    }
+    header {
+      background: linear-gradient(135deg, #b22222, #ff4444);
+      color: white;
+      text-align: center;
+      padding: 60px 20px; 
+      animation: fadeIn 2s ease-in-out;
+    }
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 12px;
+    }
+    nav {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 20px 30px; 
+      display: block;
+      font-size: large;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    nav a:hover {
+      background-color: #575757;
+      transform: scale(1.05);
+      
+    }
+    section {
+      padding: 70px 25px; 
+      min-height: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s forwards;
+    }
+    section:nth-child(even) {
+      background-color: #f4f4f4;
+    }
+    section:nth-child(odd) {
+      background-color: #fff;
+    }
+    h2 {
+      color: #b22222;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    p {
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+      font-size: 18px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px; 
+      margin-top: 30px;
+    }
+    .gallery img {
+      width: 500px;
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+      margin-left: 100px;
+      margin-right: 100px;
+      
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background-color: #b22222;
+      color: white;
+      text-align: center;
+      padding: 25px; 
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Feuerwehrjugend Gedersdorf</h1>
+    <p>Einer für alle, alle für einen!</p>
+  </header>
+
+  <nav>
+    <a href="#geschichte">Geschichte</a>
+    <a href="#aktivitaeten">Aktivitäten</a>
+    <a href="#mitgliedwerden">Mitglied werden</a>
+    <a href="#bildergalerie">Bildergalerie</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+
+  <section id="geschichte">
+    <h2>Unsere Geschichte</h2>
+    <p>
+      Die Feuerwehrjugend Gedersdorf blickt auf eine lange Tradition zurück. Schon seit Jahrzehnten
+      engagieren sich junge Menschen in unserer Gemeinschaft, um Verantwortung zu übernehmen und
+      anderen zu helfen. Aus kleinen Anfängen entwickelte sich eine starke Jugendgruppe, die heute
+      ein unverzichtbarer Teil der Feuerwehr ist. Unsere Geschichte zeigt, dass Zusammenhalt und
+      Einsatzbereitschaft Werte sind, die Generationen verbinden.
+    </p>
+  </section>
+
+  <section id="aktivitaeten">
+    <h2>Aktivitäten</h2>
+    <p>
+      Bei uns wird es nie langweilig! Wir üben regelmäßig den Umgang mit Geräten, lernen die
+      Grundlagen der Brandbekämpfung und nehmen an Bewerben teil. Neben der Ausbildung stehen
+      auch Spaß und Gemeinschaft im Vordergrund: Ausflüge, Zeltlager und Spieleabende gehören
+      genauso dazu wie sportliche Herausforderungen. So wächst nicht nur das Wissen, sondern auch
+      die Freundschaft innerhalb der Gruppe.
+    </p>
+  </section>
+
+  <section id="mitgliedwerden">
+    <h2>Mitglied werden</h2>
+    <p>
+      Du bist zwischen 10 und 15 Jahre alt und suchst nach einer spannenden Freizeitgestaltung?
+      Dann bist du bei uns genau richtig! Als Mitglied der Feuerwehrjugend Gedersdorf lernst du
+      wichtige Fähigkeiten fürs Leben, findest neue Freunde und wirst Teil einer starken Gemeinschaft.
+      Komm vorbei, informiere dich und starte dein Abenteuer bei uns!
+    </p>
+  </section>
+
+  <section id="bildergalerie">
+    <h2>Bildergalerie</h2>
+    <p>
+      Bilder sagen mehr als tausend Worte – hier siehst du unsere Jugendgruppe im Einsatz und bei Übungen.
+    </p>
+    <div class="gallery">
+      <img src="https://ff-gedersdorf.at/wp-content/uploads/2024/11/IMG_4218-scaled-768x576.jpeg" alt="Feuerwehrjugend vor HLFA3 Fahrzeug">
+      <img src="https://ff-gedersdorf.at/wp-content/uploads/2025/10/561383563_1211808060979836_4360384180291481990_n.jpg" alt="Feuerwehrjugend bei Übung im Herbst">
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>
+      Feuerwehrjugend Gedersdorf<br>
+      Hauptstraße 18, Brunn im Felde<br>
+      3494 Gedersdorf<br>
+      E-Mail: post@ff-gedersdorf.at<br><br>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Feuerwehrjugend Gedersdorf</p>
+  </footer>
+</body>
+</html>
