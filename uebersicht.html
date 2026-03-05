@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmeldedaten</title>
+
+    <style>
+        h1 {text-decoration: underline}
+
+        body {
+            zoom: 130%
+        }
+
+        table {border-collapse: collapse; width: 85%; margin: auto; margin-top: 50px; }
+
+        th {border: 1.5px solid black; padding: 8px; text-align: left}
+
+        td {border: 1px solid black; padding: 8px; text-align: left}
+
+        th {background-color: #eae4e4e8; }
+
+        p {text-align: center; margin-top: 50px; font-size: 17px;}
+    </style>
+
+</head>
+<body>
+    
+    <h1>gespeicherte Anmeldedaten</h1>
+    
+    <table id="personalData">
+        <thead>
+            <tr>
+                <th>Vorname</th>
+                <th>Nachname</th>
+                <th>Geburtsdatum</th>
+                <th>Geschlecht</th>
+                <th>Land</th>
+                <th>E-Mail</th>
+                <th>Telefonnummer</th>
+            </tr>
+        </thead>
+        <tbody id="dataTable"></tbody>
+        </table>
+
+    <p><a href="formulare.html">Zurück zu dem Anmeldeformular</a></p>
+
+    <script>
+       let gespeicherteDaten = localStorage.getItem("personalData");
+       const tbody = document.getElementById("dataTable");
+
+        if (gespeicherteDaten) {
+        let daten = JSON.parse(gespeicherteDaten);
+
+        if (!Array.isArray(daten)) {
+            daten = [daten];
+        }
+
+        daten.forEach(person => {
+            const row = document.createElement("tr");
+
+            row.innerHTML = 
+                "<td>" + person.fname + "</td>" + 
+                "<td>" + person.lname + "</td>" + 
+                "<td>" + person.birthday + "</td>" + 
+                "<td>" + person.gender + "</td>" + 
+                "<td>" + person.country + "</td>" + 
+                "<td>" + person.email + "</td>" +
+                "<td>" + person.telephone + "</td>"
+            ;
+
+            tbody.appendChild(row);
+        });
+    
+        } else {
+            tbody.innerHTML = "<tr><td>Es wurden keine gespeicherten Daten gefunden.</td></tr>";
+        }
+
+        window.addEventListener("storage", function(event) {
+            if (event.key === "personalData") {
+                location.reload();
+            }
+        });
+
+    </script>
+</html>
